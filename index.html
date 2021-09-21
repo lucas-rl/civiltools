@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CivilTools | Instalações prediais de água fria</title>
+    <link rel="stylesheet" href="estilizar.css"> 
+    <script type="text/javascript" src="javascript.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        </style>
+
+</head>
+<body>
+<div id="total">
+    <div id="lateral">
+        <div id="logo"><img src="logo.png" alt="CivilTools" id="civiltools"></div>
+        <div id="introducao">
+            As instalações prediais de água fria são as responsáveis pelo fornecimento de água em
+            uma edificação. <br><br>    
+            O correto dimensionamento é importante para que as vazões e pressões necessárias
+            cheguem em cada ponto de uso e assim não ocorram prejuizos aos usuários.<br><br>
+            Além disso, ele facilita manutenções e evita problemas de vazamento.
+        </div>
+        <div id="tituloPasso">
+            Como utilizar a calculadora?
+        </div>
+        <div id="instrucoes">
+            <div class="passoApasso">
+                <div class="item">1</div>
+                <div class="passo">Determine os trechos do seu projeto hidráulico</div>
+            </div>
+            <div class="passoApasso">
+                <div class="item">2</div>
+                <div class="passo">Para cada trecho preencha as informações ao lado</div>
+            </div>
+            <div class="passoApasso">
+                <div class="item">3</div>
+                <div class="passo">Adicione o trecho à tabela de cálculo</div>
+            </div>
+            <div class="passoApasso">
+                <div class="item">4</div>
+                <div class="passo">Exporte a tabela com os resultados finais</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="formularios">
+        <!--Pontos de uso-->
+        <div class="tituloForms">
+            <div class="parteForms">Pontos de uso</div>
+            <div class="info">i</div>
+            <div id="linha01"></div>
+        </div>
+        <form id="vazaoTrecho" name="vazao"> 
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                <label class="descricao">Bacia sanitária (Caixa de descarga):</label>
+                <input type="number" name="qntBaciaSanitariaCaixa" id="qntBaciaSanitariaCaixa" min="0" step="1">
+                </div>
+                <div class="conjuntoDados">
+                <label class="descricao">Bacia sanitária (Válvula de descarga):</label>
+                <input type="number" name="qntBaciaSanitariaValvula" id="qntBaciaSanitariaValvula" min="0" step="1">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Banheira:</label>
+                    <input type="number" name="qntBanheira" id="qntBanheira" min="0" step="1">
+                </div>
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Bebedouro:</label>
+                    <input type="number" name="qntBebedouro" id="qntBebedouro" min="0" step="1">
+                </div>
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Bidê:</label>
+                    <input type="number" name="qntBide" id="qntBide"min="0" step="1">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Chuveiro ou ducha:</label>
+                    <input type="number" name="qntChuveiroDucha" id="qntChuveiroDucha" min="0" step="1">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Chuveiro elétrico:</label>
+                    <input type="number" name="qntChuveiroEletrico" id="qntChuveiroEletrico" min="0" step="1">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Lavadoura de pratos ou roupas:</label>
+                    <input type="number" name="qntLavadoura" id="qntLavadoura" min="0" step="1">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Lavatório:</label>
+                    <input type="number" name="qntLavatorio" id="qntLavatorio" min="0" step="1">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Mictório cerâmico (Válvula de descarga):</label>
+                    <input type="number" name="qntMicCerValvula" id="qntMicCerValvula" min="0" step="1">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Mictório cerâmico (Caixa de descarga):</label>
+                    <input type="number" name="qntMicCerCaixa" id="qntMicCerCaixa" min="0" step="1">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Mictório tipo calha:</label>
+                    <input type="number" name="qntMicCalha" id="qntMicCalha" min="0" step="1">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Pia (Torneira ou misturador):</label>
+                    <input type="number" name="qntPiaTorneira" id="qntPiaTorneira" min="0" step="1">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Pia (Elétrica):</label>
+                    <input type="number" name="qntPiaEletrica" id="qntPiaEletrica">
+                </div>
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Tanque:</label>
+                    <input type="number" name="qntTanque" id="qntTanque">
+                </div>
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Torneira de jardim:</label>
+                    <input type="number" name="qntTorneiraJardim" id="qntTorneiraJardim">
+                </div>
+            </div>
+        </form>
+        <!--Peças-->
+        <div class="tituloForms">
+            <div class="parteForms">Tubulações e conexões</div>
+            <div class="info">i</div>
+            <div id="linha02"></div>
+        </div>
+        <form id="conexoes" name="pecas">
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Diâmetro Nominal (mm)</label>
+                    <select id="diametro">
+                        <option selected disabled value="20">20</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>32</option>
+                        <option>40</option>
+                        <option>50</option>
+                        <option>65</option>
+                        <option>80</option>
+                        <option>100</option>
+                        <option>125</option>
+                        <option>150</option>
+                    </select>
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Tubulação (m):</label>
+                    <input type="number" name="qntTubo" id="qntTubo" min="0">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados4">
+                    <label class="descricao4">Joelho 90°:</label>
+                    <input type="number" name="qntJoelho90" id="qntJoelho90" min="0">
+                </div>
+                <div class="conjuntoDados4">
+                    <label class="descricao4">Joelho 45°:</label>
+                    <input type="number" name="qntJoelho45" id="qntJoelho45" class="menorinput" min="0">
+                </div>
+                <div class="conjuntoDados4">
+                    <label class="descricao4">Curva 90°:</label>
+                    <input type="number" name="qntcurva90" id="qntcurva90" min="0">
+                </div>
+                <div class="conjuntoDados4">
+                    <label class="descricao4">Curva 45°:</label>
+                    <input type="number" name="qntCurva45" id="qntCurva45" min="0">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Tê passagem direta:</label>
+                    <input type="number" name="qntTeDireta" id="qntTeDireta" min="0">
+                </div>
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Tê saída lateral:</label>
+                    <input type="number" name="qntTeLateral" id="qntTeLateral" min="0">
+                </div>
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Tê saída bilateral:</label>
+                    <input type="number" name="qntTeBilateral" id="qntTeBilateral" min="0">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Entrada Normal:</label>
+                    <input type="number" name="qntEntradaNormal" id="qntEntradaNormal" min="0">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Entrada de Borda:</label>
+                    <input type="number" name="qntEntradaBorda" id="qntEntradaBorda" min="0">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Saída de canalização:</label>
+                    <input type="number" name="qntSaidaCanalizacao" id="qntSaidaCanalizacao" min="0">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Válvula de pé e crivo:</label>
+                    <input type="number" name="qntValvulaCrivo" id="qntValvulaCrivo" min="0">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Válvula de retenção (Leve):</label>
+                    <input type="number" name="qntValRetLeve" id="qntValRetLeve" min="0">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Válvula de retenção (Pesada):</label>
+                    <input type="number" name="qntValRetPesada" id="qntValRetPesada" min="0">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Registro de globo:</label>
+                    <input type="number" name="qntRegGlobo" id="qntRegGlobo" min="0">
+                </div>
+                <div class="conjuntoDados3">
+                <label class="descricao3">Registro de gaveta:</label>
+                <input type="number" name="qntRegGaveta" id="qntRegGaveta" min="0">
+                </div>
+                <div class="conjuntoDados3">
+                    <label class="descricao3">Registro de ângulo:</label>
+                    <input type="number" name="qntRegAngulo" id="qntRegAngulo" min="0">
+                </div>
+            </div>
+            
+        </form>
+        <!--Dados do trecho-->
+        <div class="tituloForms">
+            <div class="parteForms">Dados do trecho</div>
+            <div class="info">i</div>
+            <div id="linha03"></div>
+        </div>
+        <div id="dadosTrecho">
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Pressão requerida (m.c.a): </label>
+                    <input type="number" name="pressaoRequerida" id="pressaoRequerida" min="0">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Diferença de cotas (m): </label>
+                    <input type="number" name="difCotas" id="difCotas">
+                </div>
+            </div>
+            <div class="linhaDados">
+                <div class="conjuntoDados">
+                    <label class="descricao">Ponto inicial: </label>
+                    <input type="number"
+                        min="1"
+                        step="1"
+                        value= "1"
+                        onfocus="this.previousValue = this.value"
+                        onkeydown="this.previousValue = this.value"
+                        oninput="validity.valid || (value = this.previousValue)" 
+                        name="inicio" id="inicio">
+                </div>
+                <div class="conjuntoDados">
+                    <label class="descricao">Ponto final: </label>
+                    <input type="number"
+                        min="2"
+                        step="1"
+                        value= "2"
+                        onfocus="this.previousValue = this.value"
+                        onkeydown="this.previousValue = this.value"
+                        oninput="validity.valid || (value = this.previousValue)" 
+                        name="fim" id="fim">
+                </div>
+            </div> 
+
+            
+        </div>
+        <div class="addTrecho">
+        <button onclick="calcular(); adicionarTrecho();">Adicionar / editar trecho</button>
+        </div>
+    </div>
+    
+    <div id="verTabela">
+        <button onclick="abrirModal()">Tabela</button>
+    </div> 
+    <div class="notificacao" id="notificacao"> i </div>
+</div>
+
+    <div id="divTabela" class="modalTabela">
+        <div class="caixa">
+            <div class="caixaTabela"> 
+                <table id="tabela">
+                    <thead>
+                        <tr>
+                            <td class="celulaMenor">Ponto Inicial</td>
+                            <td class="celulaMenor">Ponto Final</td>
+                            <td class="celulaMenor">Soma dos pesos</td>
+                            <td class="celulaMenor">Vazão (l/s)</td>
+                            <td class="celulaMenor">Diâmetro (mm)</td>
+                            <td class="celulaMenor">Velocidade (m/s)</td>
+                            <td>Perda de carga unitária (m.c.a/m)</td>
+                            <td>Diferença de cotas (m)</td>
+                            <td>Pressão disponível (m.c.a)</td>
+                            <td>Tubulação real (m)</td>
+                            <td>Tubulação equivalente (m)</td>
+                            <td>Perda de carga - Tubulação (m.c.a.)</td>
+                            <td>Perda de carga - Concexões (m.c.a.)</td>
+                            <td>Perda de carga - Total (m.c.a.)</td>
+                            <td>Pressão disponível residual (m.c.a.)</td>
+                            <td>Pressão requerida (m.c.a)</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="botoesTabela">
+                <button id="voltar">Voltar</button>
+                <button onclick="removerTrecho()">Remover último trecho</button> 
+                <button onclick="exportarCSV()">Gerar arquivo csv</button>
+            </div>
+        </div>   
+    </div>
+    
+    
+
+</body>
+</html>

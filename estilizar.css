@@ -1,0 +1,352 @@
+body{
+    background-color: #E5E5E5;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+#total{
+    display: flex;
+    min-width: 1000px;
+    /*border:  1px solid black;*/
+    justify-content: center;
+}
+
+/*Parte esquerda da página*/
+#lateral{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /*border:  1px solid black;*/
+    background-color: white;
+    align-items: center;
+    
+}
+#logo{
+    width: 220px;
+    margin-top: 40px;
+}
+#civiltools{
+    width: 100%;
+}
+#introducao{
+    margin-top: 50px;
+    width: 220px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: justify;
+}
+#tituloPasso{
+    margin-top: 30px;
+    color: #84AC68;
+    font-weight: bold;
+}
+#instrucoes{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+.passoApasso{
+    display: flex;
+    width: 220px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+}
+.item{
+    width: 16px;
+    height: 16px;
+    border:  2px solid #84AC68;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #84AC68;
+    font-weight: bold;
+}
+.passo{
+    width: 70%;
+    font-size: 12px;
+    
+}
+
+
+/*Parte direita da página*/
+#formularios{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding-top: 40px;
+    width: 620px;
+    /*border:  1px solid black;*/
+    background-color: #F9F9F9;
+    font-size: 12px;
+}
+.tituloForms{
+    display: flex;
+    font-size: 22px;
+    color: #216489;
+    font-weight: 900;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.info{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #216489;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+#linha01{
+    width: 400px;
+    height: 0px;
+    border: 1px solid #216489;
+}
+#linha02{
+    width: 300px;
+    height: 0px;
+    border: 1px solid #216489;
+}
+#linha03{
+    width: 370px;
+    height: 0px;
+    border: 1px solid #216489;
+}
+#vazaoTrecho{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+#dadosTrecho{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+#conexoes{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; 
+}
+.linhaDados{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.conjuntoDados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+.descricao{
+    width: 228px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.conjuntoDados3{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.descricao3{
+    width: 128px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.conjuntoDados4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 147px;
+}
+.descricao4{
+    width: 75px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#formularios input{
+    width: 55px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #D4D4D4;
+    background-color: #F0F0F0;
+    color: #333333;
+    margin: 0;
+}
+
+#diametro{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 65px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #D4D4D4;
+    background-color: #F0F0F0;
+    color: #333333;
+    
+}
+
+#resultados{
+    margin-left: 50px;
+}
+
+#resultados label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#diametro{
+    margin-bottom: 5px;
+}
+
+.modalTabela{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0px;
+    left: -8px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    
+}
+
+.modalTabela.mostrar{
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    padding: 20px;
+    min-width: 960px;
+    min-height: 560px;
+    max-height: 560px;
+    background-color: white;
+}
+.caixaTabela{
+    height: 510px;
+    width: 960px;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+#tabela{
+    font-size: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border:1px solid black
+}
+
+table tr td{
+    
+    width: 100px;
+    border:1px solid black
+}
+
+.celulaMenor{
+    width: 50px;
+}
+
+.addTrecho{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.addTrecho button{
+    border: none;
+    background-color: #699845;
+    color: white;
+    width: 230px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+#verTabela{
+    position: fixed;
+    left: 76%;
+    top:95%;
+    width: 150px;
+    height: 25px;
+}
+#verTabela button{
+    width: 100%;
+    height: 100%;
+    background-color: #0A547D;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border:none;
+    padding: none;
+}
+.notificacao{
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    display: none;
+    background-color: red;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    position: fixed;
+    left: 85.7%;
+    top: 93.4%;
+}
+.notificacao.mostrar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoesTabela{
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+}
